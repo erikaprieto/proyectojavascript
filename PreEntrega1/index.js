@@ -17,9 +17,7 @@ while ((!peso && peso !== 0 ) && n < 3) {
 }
 
 let centimetrosAMetros = altura / 100;
-console.log(centimetrosAMetros);
-
-let IMC = peso / centimetrosAMetros ** 2;
+let IMC = calcularImc(peso, centimetrosAMetros);
 
 
 if (IMC < 18.5){
@@ -32,6 +30,11 @@ if (IMC < 18.5){
     IMC = alert( IMC + " " + "Obesidad.");
 }
 
+
+function calcularImc (peso,metros) {
+    let IMC = peso / metros ** 2;
+    return IMC;
+}
 
 
 
